@@ -2,7 +2,7 @@ name: First workflow
 
 # Specify the event that triggers the workflow
 on:
-  workflow_dispatch: # Event type for manual trigger
+  workflow_dispatch:
 
 # Define the jobs
 jobs:
@@ -14,3 +14,8 @@ jobs:
         
       - name: Print a Thanks message
         run: echo "Thanks & regards"
+
+      - name: Print multiple messages
+        run: |
+          echo "First line"
+          echo "Second line"
