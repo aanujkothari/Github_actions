@@ -1,0 +1,11 @@
+name: First workflow
+on: trigger manually
+jobs: 
+  first job
+    runs-on: windows-latest
+    steps:
+      - name: Print Hello World
+        run: echo "Hello World"
+        
+      - name: Print a Thanks message
+        run: echo "Thanks & regards"
