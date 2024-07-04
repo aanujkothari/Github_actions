@@ -1,7 +1,12 @@
 name: First workflow
-on: trigger manually
-jobs: 
-  first job:
+
+# Specify the event that triggers the workflow
+on:
+  workflow_dispatch: # Event type for manual trigger
+
+# Define the jobs
+jobs:
+  first_job: 
     runs-on: windows-latest
     steps:
       - name: Print Hello World
