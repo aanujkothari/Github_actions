@@ -1,7 +1,7 @@
 name: First workflow
 on: trigger manually
 jobs: 
-  first job
+  first job:
     runs-on: windows-latest
     steps:
       - name: Print Hello World
