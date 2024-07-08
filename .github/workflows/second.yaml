@@ -1,20 +1,11 @@
 name: second workflow
 on: workflow_dispatch
 jobs:
-  manual-job:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Print Hello world
-        run: echo "Hello World!"
-
-      - name: Print adios
-        run: echo "Adios amigo"
-
-name: third workflow
-on: workflow_dispatch
-jobs:
-  second-job:
-    runs-on: ubuntu-latest
-    steps:
-      -name: Print greeting
-       run: echo 'Hello world'
+    manual-job:
+        runs-on: macos-13
+        steps:
+            - name: Print greeting
+              run: echo 'Hello world'
+              
+            - name: Print adios
+              run: echo 'adios amigos'
