@@ -1,4 +1,4 @@
-name: variable
+name: envStep
 on: workflow_dispatch
 jobs:
     using-variables:
