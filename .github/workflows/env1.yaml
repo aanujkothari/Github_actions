@@ -1,7 +1,7 @@
 name: variable
 on: [workflow_dispatch]
 jobs:
-    using variables
+    using variables:
   windows_job:
     runs-on: ubuntu-latest
     steps:
