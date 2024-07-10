@@ -6,17 +6,17 @@ jobs:
         steps: 
            - name: Print first repo variable 
              run: |
-                 echo ${{vars.city}}
+                 echo ${{vars.country}}
 
-    #        - name: Print step level variable
-    #          env: 
-    #            city: Manali
-    #          run: echo ${{env.city}}
+           - name: Print step level variable
+             env: 
+               city: Manali
+             run: echo ${{env.city}}
              
-    # Testing:
-    #     needs: [Build]
-    #     runs-on: macos-latest
-    #     steps: 
-    #         - name: Print second repo variable
-    #           run: |
-    #               echo ${{vars.continent}}
+    Testing:
+        needs: [Build]
+        runs-on: macos-latest
+        steps: 
+            - name: Print second repo variable
+              run: |
+                  echo ${{vars.continent}}
