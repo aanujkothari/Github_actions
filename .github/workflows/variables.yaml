@@ -5,7 +5,8 @@ jobs:
         runs-on: windows-latest
         steps: 
            - name: Print first repo variable 
-             run: echo ${{vars.city}}
+             run: |
+                 echo ${{vars.city}}
 
            - name: Print step level variable
              env: 
@@ -17,4 +18,5 @@ jobs:
         runs-on: macos-latest
         steps: 
             - name: Print second repo variable
-              run: echo ${{vars.continent}}
+              run: |
+                  echo ${{vars.continent}}
