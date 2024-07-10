@@ -3,4 +3,9 @@ on: workflow_dispatch
 jobs:
     using-variables:
         runs-on: ubuntu-latest
+        env:
+            USER: Anuj
+        steps: 
+           - name: Print variable
+             run: echo ${{env.USER}}
    
