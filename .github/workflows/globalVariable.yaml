@@ -1,0 +1,17 @@
+name: globalVariable
+on: workflow_dispatch
+jobs:
+    Regression_Testing:
+        runs-on: ubuntu-latest
+        env:
+            USER: Anuj
+        steps: 
+           - name: Print variable
+             run: echo ${{env.USER}}
+
+           - name: Print step level variable
+             env: 
+               city: Delhi
+             run: echo ${{env.city}}
+             
+    Ad-hoc_Testing:
