@@ -1,0 +1,28 @@
+name: globalVariable
+on: workflow_dispatch
+env:
+    USERNAME: aanujkothari
+    password: 12345  
+jobs:
+    Regression_Testing:
+        runs-on: windows-latest
+        steps: 
+           - name: Print first global variable 
+             run: echo ${{env.USERNAME}}
+
+           - name: Print step level variable
+             env: 
+               city: Delhi
+             run: echo ${{env.city}}
+             
+    Adhoc_Testing:
+        needs: [Regression_Testing]
+        runs-on: macos-latest
+        steps: 
+            - name: Print second global variable
+              run: echo ${{env.password}}
+              
+            - name: Print step level variable
+              env: 
+                 country: India
+              run: echo ${{env.country}}
