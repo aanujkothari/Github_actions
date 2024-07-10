@@ -1,9 +1,6 @@
 name: variable
-on: [workflow_dispatch]
+on: workflow_dispatch
 jobs:
-    using variables:
-  windows_job:
-    runs-on: ubuntu-latest
-    steps:
-    
-      - run: echo 
+    using-variables:
+        runs-on: ubuntu-latest
+   
