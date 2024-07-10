@@ -1,4 +1,4 @@
-name: globalVariable
+name: sequentialJobs
 on: workflow_dispatch
 env:
     USERNAME: aanujkothari
