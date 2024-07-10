@@ -15,8 +15,8 @@ jobs:
                city: Delhi
              run: echo ${{env.city}}
              
-    # Adhoc_Testing:
-    #        runs-on: macos-latest
-    #        steps: 
-    #            - name: Print second global variable
-    #              run: echo ${{env.password}}
+    Adhoc_Testing:
+        runs-on: macos-latest
+        steps: 
+            - name: Print second global variable
+              run: echo ${{env.password}}
