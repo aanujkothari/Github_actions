@@ -2,7 +2,7 @@ name: globalVariable
 on: workflow_dispatch
 env:
     USERNAME: aanujkothari
-    # password: 12345  
+    password: 12345  
 jobs:
     Regression_Testing:
         runs-on: windows-latest
