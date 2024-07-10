@@ -32,6 +32,7 @@ jobs:
     Deploy:
         needs: [Adhoc_Testing]
         if: always()
+        # if: always() is used to run a job even if the dependee job fails. 
         runs-on: macos-latest
         steps: 
             - name: Print all global variables
