@@ -4,7 +4,7 @@ env:
     USERNAME: aanujkothari
     password: 12345  
 jobs:
-    Regression_Testing:
+    Build:
         runs-on: windows-latest
         steps: 
            - name: Print first global variable 
@@ -16,8 +16,8 @@ jobs:
              run: echo ${{env.city}}
              
     Adhoc_Testing:
-        needs: [Regression_Testing]
-        runs-on: macos-latest
+        needs: [Build]
+        runs-on: ubuntu-latest
         steps: 
             - name: Print second global variable
               run: echo ${{env.password}}
@@ -26,3 +26,11 @@ jobs:
               env: 
                  country: India
               run: echo ${{env.country}}
+              
+    Deploy:
+        needs: [Adhoc_Testing]
+        runs-on: macos-latest
+        steps: 
+            - name: Print all global variables
+              run: echo ${{env.password}}
+              
