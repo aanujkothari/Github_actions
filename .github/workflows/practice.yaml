@@ -1,0 +1,9 @@
+name: Practice WorkFlow
+on: workflow_dispatch
+jobs:
+  Testing_job:
+    runs-on: windows-latest
+    steps:
+      - name: Print Greeting
+        run: echo "Hello Anuj"
+      
